@@ -1,0 +1,22 @@
+{
+  "start_urls": [
+    "http://localhost:3000/docs"
+  ],
+  "additional_request_headers": {
+    "Authorization": "Basic ZG9jc3NlYXJjaDpkb2Nzc2VhcmNo"
+  },
+  "meilisearch_url": "http://localhost:7700",
+  "meilisearch_index_uid": "docssearch",
+  "meilisearch_api_key": "docssearch",
+  "meilisearch_settings": {
+    "embedders": {
+      "default": {
+        "source":  "openAi",
+        "model": "text-embedding-3-small",
+        "documentTemplate": "{{doc.content|truncatewords: 100}}"
+      }
+    }
+  },
+  "strategy": "docssearch",
+  "headless": false
+}
